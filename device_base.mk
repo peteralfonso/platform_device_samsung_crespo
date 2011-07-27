@@ -154,8 +154,11 @@ else
 LOCAL_WIFI_MODULE := $(TARGET_PREBUILT_WIFI_MODULE)
 endif
 
-PRODUCT_COPY_FILES += \
-	$(LOCAL_WIFI_MODULE):system/modules/bcm4329.ko
+# copy all kernel modules under the "modules" directory to system/modules
+PRODUCT_COPY_FILES += $(shell \
+    find device/samsung/crespo/modules -name '*.ko' \
+    | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/modules\/\2/' \
+    | tr '\n' ' ')
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/samsung/crespo/kernel
