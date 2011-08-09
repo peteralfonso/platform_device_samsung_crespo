@@ -26,7 +26,7 @@ BOARD_NO_PAGE_FLIPPING := true
 BOARD_NO_32BPP := true
 
 # Use the non-open-source parts, if they're present
--include vendor/samsung/crespo/BoardConfigVendor.mk
+-include vendor/samsung/crespo/BoardConfigCrespo.mk
 
 # Use the parts that are common between all crespos
 include device/samsung/crespo/BoardConfigCommon.mk
