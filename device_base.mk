@@ -125,18 +125,9 @@ PRODUCT_PROPERTY_OVERRIDES := \
 # Note that the only such settings should be the ones that are too low-level to
 # be reachable from resources or other mechanisms.
 PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.interface=eth0 \
-    wifi.supplicant_scan_interval=15 \
-    dalvik.vm.heapsize=32m
-
-# Additional build properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
-    ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
-    ro.com.google.clientidbase=android-google \
-    ro.com.android.wifi-watchlist=GoogleGuest \
-    ro.error.receiver.system.apps=com.google.android.feedback \
-    ro.setupwizard.enterprise_mode=1
+       wifi.interface=eth0 \
+       wifi.supplicant_scan_interval=15 \
+       dalvik.vm.heapsize=32m
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
