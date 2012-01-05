@@ -96,7 +96,7 @@
 
     <!-- Component name of the default wallpaper. This will be ImageWallpaper if not 
          specified -->
-    <string name="default_wallpaper_component">com.android.wallpaper/.nexus.NexusWallpaper</string>
+    <string name="default_wallpaper_component">com.android.phasebeam/.PhaseBeamWallpaper</string>
 
     <integer name="config_deskDockRotation">90</integer>
     <integer name="config_deskDockKeepsScreenOn">0</integer>
